@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gob.mx</string>
+    <string name="lblDependency">Dependencias o Entidades</string>
+    <string name="lblServices">Catálogo Nacional de Trámites y Servicios</string>
+    <string name="lblOpinion">Danos tu opinión</string>
+    <string name="title_activity_portal">Portal ciudadano</string>
+    <string name="title_button">Botón</string>
+    <string name="title_activity_opinion">Danos tu opinión</string>
+    <string name="lblRating">Número de votos:</string>
+    <string name="lblDescriptionOption">Selecciona los tramites o servicios que te gustaría que esten listos para usar en nuestra plataforma.\nSólo podrás votar una vez por día.</string>
+    <string name="btnSend">Enviar</string>
+    <string name="title_activity_welcome">GobMx</string>
+    <string name="title_activity"></string>
+    <string name="title_activity_services">Tramites y Servicios</string>
+    <string name="hint_search">Buscar</string>
+    <string name="action_search">Buscar</string>
+    <string name="title_portal_web"></string>
+    <string name="title_activity_information_services">Information Services</string>
+    <string name="lblShowMore">Ver más ▼</string>
+    <string name="lblShowLess">Ver menos ▲</string>
+    <string name="lblDocuments">Documentos requeridos</string>
+    <string name="lblCost">Costos</string>
+    <string name="lblCostConcept">Concepto</string>
+    <string name="lblCostAmount">Monto</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lbl_rate_us_opinion">Danos tu opinión para ofrecerte un mejor servicio</string>
+    <string name="hint_title">Título</string>
+    <string name="hint_comments">Comentarios</string>
+    <string name="rate_star1">Puede mejorar</string>
+    <string name="rate_star2">Regular</string>
+    <string name="rate_star3">Bueno</string>
+    <string name="rate_star4">Me gustó</string>
+    <string name="rate_star5">Excelente</string>
+    <string name="alert_error">Alerta</string>
+    <string name="alert_callServiceOff">Servicio de telefonía desactivado.</string>
+    <string name="alert_rateStar">Debe seleccionar al menos una estrella.</string>
+    <string name="alert_title_null">El título debe contener al menos 5 caracteres.</string>
+    <string name="alert_comment_null">Los comentarios deben ser al menos 10 caractéres.</string>
+    <string name="alert_rate_success">Gracias por calificar este servicio.</string>
+    <string name="alert_opinion_votes">Hoy ya votaste, puedes intentar votar mañana.</string>
+    <string name="alert_vote_success">Gracias por votar, puedes votar mañana por nuevas campañas.</string>
+</resources>

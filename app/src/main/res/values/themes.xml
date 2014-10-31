@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ThemeGobMx"
+        parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/RedActionBar</item>
+    </style>
+
+    <style name="RedActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#800</item>
+        <item name="android:actionMenuTextColor">#fff</item>
+        <item name="android:titleTextStyle">@style/FontTextWhite</item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+
+    <!-- Color fonts -->
+
+    <style name="FontTextWhite">
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <!-- Theme Welcome -->
+
+    <style name="noActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowTitleSize">0dp</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>
