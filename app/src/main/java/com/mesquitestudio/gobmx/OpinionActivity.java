@@ -29,6 +29,7 @@ public class OpinionActivity extends Activity {
     SharedPreferences preferences;
     static int day;
     Calendar calendar;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +84,7 @@ public class OpinionActivity extends Activity {
     void loadIn() {
         try {
             Ion.with(getApplicationContext())
-                    .load("http://192.168.120.24:8800/ws/campaign")
+                    .load("http://gobmx.mesquitestudio.com/ws/campaign")
                     .asJsonObject()
                     .withResponse()
                     .setCallback(new FutureCallback<Response<JsonObject>>() {
@@ -104,7 +105,7 @@ public class OpinionActivity extends Activity {
                                 }
 
                                 adapter = new CampaignAdapter(getApplicationContext(), R.layout.cell_campaign, campaign_list);
-                                ListView listView = (ListView) findViewById(R.id.listview);
+                                listView = (ListView) findViewById(R.id.listview);
                                 listView.setAdapter(adapter);
 
                                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -130,7 +131,7 @@ public class OpinionActivity extends Activity {
 
     boolean sending(final JsonObject jo) {
         Ion.with(OpinionActivity.this)
-                .load("POST", "http://192.168.120.24:8800/ws/voto")
+                .load("POST", "http://gobmx.mesquitestudio.com/ws/voto")
                 .setJsonObjectBody(jo)
                 .asJsonObject()
                 .withResponse()

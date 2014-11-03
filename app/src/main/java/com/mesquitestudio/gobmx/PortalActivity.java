@@ -46,7 +46,7 @@ public class PortalActivity extends Activity {
 
     void getSData() {
         Ion.with(getApplicationContext())
-                .load("http://192.168.120.24:8800/ws/link")
+                .load("http://gobmx.mesquitestudio.com/ws/link")
                 .asJsonObject()
                 .withResponse()
                 .setCallback(new FutureCallback<Response<JsonObject>>() {

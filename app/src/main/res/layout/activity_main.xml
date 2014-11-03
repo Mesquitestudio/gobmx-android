@@ -25,10 +25,10 @@
             android:id="@+id/btnDependency"
             android:drawableLeft="@drawable/ic_search"
             android:drawableStart="@drawable/ic_search"
-            android:gravity="start|center_vertical"
-            android:textSize="11pt"
+            android:gravity="center"
+            android:textSize="23dp"
             android:background="@drawable/button_white"
-            android:layout_gravity="center_horizontal|bottom"/>
+            android:layout_gravity="center"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="100dp"
@@ -38,10 +38,10 @@
             android:id="@+id/btnServices"
             android:drawableLeft="@drawable/ic_docs_s"
             android:drawableStart="@drawable/ic_docs_s"
-            android:gravity="start|center_vertical"
-            android:textSize="11pt"
+            android:gravity="center"
+            android:textSize="23dp"
             android:background="@drawable/button_white"
-            android:layout_gravity="center_horizontal|bottom"/>
+            android:layout_gravity="center"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="100dp"
@@ -51,9 +51,9 @@
             android:id="@+id/btnOpinion"
             android:drawableLeft="@drawable/ic_like"
             android:drawableStart="@drawable/ic_like"
-            android:gravity="start|center_vertical"
-            android:textSize="11pt"
+            android:gravity="center"
+            android:textSize="23dp"
             android:background="@drawable/button_white"
-            android:layout_gravity="center_horizontal|bottom"/>
+            android:layout_gravity="center"/>
     </LinearLayout>
 </ScrollView>

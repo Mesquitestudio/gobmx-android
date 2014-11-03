@@ -5,14 +5,14 @@ import java.io.Serializable;
 /**
  * Created by paulmoreno on 10/16/14.
  */
-public class Aditional implements Serializable {
+public class Additional implements Serializable {
 
     String information;
-    String Detail;
+    String detail;
 
-    public Aditional(String information, String detail) {
+    public Additional(String information, String detail) {
         this.information = information;
-        Detail = detail;
+        this.detail = detail;
     }
 
     public String getInformation() {
@@ -24,10 +24,10 @@ public class Aditional implements Serializable {
     }
 
     public String getDetail() {
-        return Detail;
+        return detail;
     }
 
     public void setDetail(String detail) {
-        Detail = detail;
+        this.detail = detail;
     }
 }

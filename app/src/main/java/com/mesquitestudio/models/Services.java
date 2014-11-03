@@ -14,7 +14,7 @@ public class Services implements Serializable{
     ArrayList<Document> documentList;
     ArrayList<Cost> costsList;
     ArrayList<Resolution> resolutionList;
-    ArrayList<Aditional> aditionalList;
+    ArrayList<Additional> additionalList;
 
     public Services(int id, String name, String dependency, String html, String imageUrl, String phone, String web, String address) {
         this.id = id;
@@ -125,11 +125,11 @@ public class Services implements Serializable{
         this.resolutionList = resolutionList;
     }
 
-    public ArrayList<Aditional> getAditionalList() {
-        return aditionalList;
+    public ArrayList<Additional> getAdditionalList() {
+        return additionalList;
     }
 
-    public void setAditionalList(ArrayList<Aditional> aditionalList) {
-        this.aditionalList = aditionalList;
+    public void setAditionalList(ArrayList<Additional> aditionalList) {
+        this.additionalList = aditionalList;
     }
 }
