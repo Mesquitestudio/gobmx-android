@@ -16,13 +16,13 @@ import java.util.List;
 /**
  * Created by paulmoreno on 9/30/14.
  */
-public class AditionalAdapter extends BaseExpandableListAdapter {
+public class AdditionalAdapter extends BaseExpandableListAdapter {
 
     private Context context;
     private List<String> groupList;
     private HashMap<String, List<String>> childList;
 
-    public AditionalAdapter(Context context, List<String> groupList, HashMap<String, List<String>> childList) {
+    public AdditionalAdapter(Context context, List<String> groupList, HashMap<String, List<String>> childList) {
         this.context = context;
         this.groupList = groupList;
         this.childList = childList;

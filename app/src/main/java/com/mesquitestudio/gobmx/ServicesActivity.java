@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -20,7 +22,7 @@ import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
 import com.koushikdutta.ion.Response;
 import com.mesquitestudio.adapters.ServiceAdapter;
-import com.mesquitestudio.models.Aditional;
+import com.mesquitestudio.models.Additional;
 import com.mesquitestudio.models.Cost;
 import com.mesquitestudio.models.Document;
 import com.mesquitestudio.models.Resolution;
@@ -51,6 +53,24 @@ public class ServicesActivity extends Activity {
 
         searchBox = (EditText) findViewById(R.id.searchBox);
         searchBox.setOnEditorActionListener(new onSearchActionListener());
+        searchBox.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (s.length() == 0) {
+                    getSData();
+                }
+            }
+        });
 
         listView = (ListView) findViewById(R.id.lvServices);
         listView.setOnItemClickListener(new ItemClickListener());
@@ -61,7 +81,7 @@ public class ServicesActivity extends Activity {
     void getSData() {
         services_list = new ArrayList<Services>();
         Ion.with(getApplicationContext())
-                .load("http://192.168.120.24:8800/ws/service")
+                .load("http://gobmx.mesquitestudio.com/ws/service")
                 .asJsonObject()
                 .withResponse()
                 .setCallback(new FutureCallback<Response<JsonObject>>() {
@@ -75,7 +95,7 @@ public class ServicesActivity extends Activity {
                                 ArrayList<Document> documents_list = new ArrayList<Document>();
                                 ArrayList<Cost> costs_list = new ArrayList<Cost>();
                                 ArrayList<Resolution> resolutions = new ArrayList<Resolution>();
-                                ArrayList<Aditional> aditionals = new ArrayList<Aditional>();
+                                ArrayList<Additional> aditionals = new ArrayList<Additional>();
                                 JsonObject service_object = (JsonObject) object;
                                 String name = service_object.get("name").getAsString();
                                 String dependency = service_object.get("dependency").getAsString();
@@ -114,13 +134,13 @@ public class ServicesActivity extends Activity {
                                     resolutions.add(resolutionModel);
                                     servicesModel.setResolutionList(resolutions);
                                 }
-                                JsonArray aditional = service_object.getAsJsonArray("aditional");
-                                for (Object o : aditional) {
+                                JsonArray additional = service_object.getAsJsonArray("additional");
+                                for (Object o : additional) {
                                     JsonObject jo = (JsonObject) o;
                                     String information = jo.get("information").getAsString();
                                     String detail = jo.get("detail").getAsString();
-                                    Aditional aditionalModel = new Aditional(information, detail);
-                                    aditionals.add(aditionalModel);
+                                    Additional additionalModel = new Additional(information, detail);
+                                    aditionals.add(additionalModel);
                                     servicesModel.setAditionalList(aditionals);
                                 }
                                 services_list.add(servicesModel);
@@ -135,7 +155,7 @@ public class ServicesActivity extends Activity {
     void getSSData(final String text) {
         services_list = new ArrayList<Services>();
         Ion.with(getApplicationContext())
-                .load("http://192.168.120.24:8800/ws/search")
+                .load("http://gobmx.mesquitestudio.com/ws/search")
                 .asJsonObject()
                 .withResponse()
                 .setCallback(new FutureCallback<Response<JsonObject>>() {
@@ -148,7 +168,7 @@ public class ServicesActivity extends Activity {
                                 ArrayList<Document> documents_list = new ArrayList<Document>();
                                 ArrayList<Cost> costs_list = new ArrayList<Cost>();
                                 ArrayList<Resolution> resolutions = new ArrayList<Resolution>();
-                                ArrayList<Aditional> aditionals = new ArrayList<Aditional>();
+                                ArrayList<Additional> additionals = new ArrayList<Additional>();
                                 JsonObject service_object = (JsonObject) object;
                                 String name = service_object.get("name").getAsString();
                                 String dependency = service_object.get("dependency").getAsString();
@@ -187,14 +207,14 @@ public class ServicesActivity extends Activity {
                                     resolutions.add(resolutionModel);
                                     servicesModel.setResolutionList(resolutions);
                                 }
-                                JsonArray aditional = service_object.getAsJsonArray("aditional");
-                                for (Object o : aditional) {
+                                JsonArray additional = service_object.getAsJsonArray("additional");
+                                for (Object o : additional) {
                                     JsonObject jo = (JsonObject) o;
                                     String information = jo.get("information").getAsString();
                                     String detail = jo.get("detail").getAsString();
-                                    Aditional aditionalModel = new Aditional(information, detail);
-                                    aditionals.add(aditionalModel);
-                                    servicesModel.setAditionalList(aditionals);
+                                    Additional additionalModel = new Additional(information, detail);
+                                    additionals.add(additionalModel);
+                                    servicesModel.setAditionalList(additionals);
                                 }
                                 services_list.add(servicesModel);
                             }

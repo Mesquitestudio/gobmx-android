@@ -154,7 +154,7 @@ public class RatingCampaign extends Activity {
                     if (rateStar != 0) {
                         if (etTitle.getText().toString().length() >= 5) {
                             if (etComments.getText().toString().length() >= 10) {
-                                String url = "http://192.168.120.24:8800/ws/ranking?title=" + etTitle.getText() + "&description=" + etComments.getText() + "&score=" + rateStar + "&id_service=" + service_data.getId();
+                                String url = "http://gobmx.mesquitestudio.com/ws/ranking?title=" + etTitle.getText() + "&description=" + etComments.getText() + "&score=" + rateStar + "&id_service=" + service_data.getId();
                                 Log.d("event", url);
                                 RequestQueue queue = Volley.newRequestQueue(RatingCampaign.this);
                                 StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {

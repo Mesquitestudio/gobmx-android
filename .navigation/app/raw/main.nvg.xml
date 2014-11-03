@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.mesquitestudio.gobmx.InformationServices"/>
+      <point      
+        x = "2720"      
+        y = "160"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.mesquitestudio.gobmx.PortalWebView"/>
+      <point      
+        x = "1920"      
+        y = "160"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.mesquitestudio.gobmx.MainActivity"/>
+      <point      
+        x = "160"      
+        y = "160"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.mesquitestudio.gobmx.RatingCampaign"/>
+      <point      
+        x = "0"      
+        y = "960"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.mesquitestudio.gobmx.ServicesActivity"/>
+      <point      
+        x = "640"      
+        y = "1120"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.mesquitestudio.gobmx.OpinionActivity"/>
+      <point      
+        x = "1120"      
+        y = "1440"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.mesquitestudio.gobmx.PortalActivity"/>
+      <point      
+        x = "320"      
+        y = "640"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.mesquitestudio.gobmx.WelcomeActivity"/>
+      <point      
+        x = "0"      
+        y = "0"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.mesquitestudio.gobmx.SiteServiceActivity"/>
+      <point      
+        x = "4000"      
+        y = "800"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>
