@@ -35,12 +35,6 @@ public class MainActivity extends Activity {
         calendar = Calendar.getInstance();
         preferences = getSharedPreferences("App", 0);
 
-        int API_LEVEL = Build.VERSION.SDK_INT;
-
-        if (API_LEVEL >= Build.VERSION_CODES.KITKAT) {
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        }
-
         getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getActionBar().setCustomView(R.layout.title_centered);
 

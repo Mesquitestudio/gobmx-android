@@ -46,7 +46,7 @@ public class ServicesActivity extends Activity {
 
         getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getActionBar().setTitle(R.string.title_activity_services);
-        getActionBar().setCustomView(R.layout.title_centered_w_g);
+        getActionBar().setCustomView(R.layout.title_centered);
 
         tvTitle = (TextView) findViewById(R.id.lblTitle_activity);
         tvTitle.setText("Tramites y Servicios");

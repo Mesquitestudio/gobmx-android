@@ -3,6 +3,7 @@ package com.mesquitestudio.gobmx;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,11 +19,13 @@ public class WelcomeActivity extends Activity {
         Thread timer = new Thread(){
             public void run() {
                 try {
-                    sleep(3000);
+                    sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
                     Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
             }
@@ -36,6 +39,8 @@ public class WelcomeActivity extends Activity {
                 e.printStackTrace();
             } finally {
                 Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
         }

@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.mesquitestudio.adapters.TabPageAdapter;
 import com.mesquitestudio.fragments.AdditionalFragment;
@@ -42,6 +43,8 @@ public class InformationServices extends FragmentActivity implements View.OnClic
     ImageView btnResolution;
     ImageView btnAdditional;
 
+    TextView tvTitle;
+
     InformationFragment informationFragment;
     ServicesFragment servicesFragment;
     ResolutionFragment resolutionFragment;
@@ -59,12 +62,17 @@ public class InformationServices extends FragmentActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information_services);
 
+        getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getActionBar().setTitle(R.string.title_activity_services);
+        getActionBar().setCustomView(R.layout.title_centered);
+
+        tvTitle = (TextView) findViewById(R.id.lblTitle_activity);
+
         Bundle bundle = getIntent().getExtras();
         service_data = (Services) bundle.get(SERVICE_DATA);
 
         try {
-            bar = getActionBar();
-            bar.setTitle(service_data.getName());
+            tvTitle.setText(service_data.getName());
 
         } catch (Exception e) {
             e.printStackTrace();

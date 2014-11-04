@@ -10,13 +10,18 @@ android {
         versionCode 1
         versionName "1.0"
     }
-    buildTypes {
+    signingConfigs {
         release {
-            runProguard false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        storeFile file("gobmx.jks")
+        storePassword "gobmx1"
+        keyAlias "gobmxkey"
+        keyPassword "gobmx1"
         }
     }
-    productFlavors {
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
     }
 }
 
