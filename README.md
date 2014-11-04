@@ -3,6 +3,15 @@
 Prototipo para el reto  GobMx  desarrollado por [Mesquitestudio](http://www.mesquitestudio.com). 
 
 
+Descripción
+-----------
+En esta aplicación el usuario podrá navegar en los diferentes servicios y tramites que ofrece el portal Gob.mx  donde usted podrá realizar dichos servicios desde la aplicación.
+
+las funcionalidades de la aplicación son : 
+- Ver dependencias o entidades
+- Catalogo Nacional de tramites y servicios
+- Calificar la aplicación.
+
 
 Version
 ----
@@ -11,7 +20,6 @@ Version
 
 Manual
 ----
-
 
 #### 1. Dependencias o Entidades ####
 
@@ -71,6 +79,10 @@ Manual
 - ION
 - Volley
  
+ Backend
+ - Laravel
+ - Bootstrap
+ - jQuery 
 
 =====
 
