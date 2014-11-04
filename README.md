@@ -1,6 +1,6 @@
 # GobMx
 
-Prototipo para el reto ** GobMx ** desarrollado por [Mesquitestudio](http://www.mesquitestudio.com). 
+Prototipo para el reto  GobMx  desarrollado por [Mesquitestudio](http://www.mesquitestudio.com). 
 
 
 
@@ -15,11 +15,10 @@ Manual
 
 #### 1. Dependencias o Entidades ####
 
-** Dirige al usuario a los diferentes portales del gobierno dentro de la misma app. **
-
+ Dirige al usuario a los diferentes portales del gobierno dentro de la misma app. 
 #### 2. Catalogo Nacional de Trámites y Servicios ####
 
-** Dirige al usuario a un catálogo de los servicios del gobierno. **
+ Dirige al usuario a un catálogo de los servicios del gobierno. 
 
 	2.1. Búsqueda: Campo de búsqueda para filtrar el listado de servicios.
 
@@ -59,7 +58,7 @@ Manual
 
 #### 3. Danos tu opinión ####
 
-** El usuario vota por las opciones listadas acerca de servicios futuros o que pronto estarán disponibles. **
+ El usuario vota por las opciones listadas acerca de servicios futuros o que pronto estarán disponibles. 
 
 	3.1. Para votar por las opciones de una campaña:
 
@@ -68,7 +67,7 @@ Manual
 
 
 ##Dependencias
-** Andorid ** 
+ Andorid  
 - ION
 - Volley
  
@@ -77,7 +76,7 @@ Manual
 
 ##Adicional
 
-** Para poder correr la aplicación es necesario seleccionar la versión "release" en "Build Variants" **
+ Para poder correr la aplicación es necesario seleccionar la versión "release" en "Build Variants" 
 
 [Imagen de referencia](https://www.dropbox.com/s/iqboaezbej2wamp/build%20variants.png?dl=0)
 
